@@ -35,8 +35,9 @@ function All_products({ filterInfo }) {
   useEffect(() => {
     const filteredProducts = data.filter(
       (product) =>
-        product.title.toLocaleLowerCase().includes(filterInfo) || filterInfo === "" || (
-          product.category.toLocaleLowerCase().includes(filterInfo) && filterInfo != "men's clothing")
+        product.title.toLocaleLowerCase().includes(filterInfo)
+        || filterInfo === ""
+        || (product.category.toLocaleLowerCase().includes(filterInfo) && filterInfo != "men's clothing")
         || product.category === filterInfo
 
     );

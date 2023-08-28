@@ -1,6 +1,4 @@
 import React from "react";
-// import React, { useEffect, useRef, useState } from "react";
-// import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import './style/product_details.css'
@@ -30,8 +28,6 @@ const Product_details = () => {
                     <Link to="/">
                         <i className="custom-link hoverIcon bi bi-house-door-fill " ></i>
                     </Link>
-
-
                 </div>
             </div>
 
