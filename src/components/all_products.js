@@ -20,11 +20,10 @@ function All_products({ filterInfo }) {
   };
   const handleDecreaseQuantity = (productId) => {
     const index = data.findIndex(p => p.id == productId);
-    if(data[index].quantity!=0)
-    {
-    data[index].quantity--;
-    setFilterData([...data])
-   }
+    if (data[index].quantity != 0) {
+      data[index].quantity--;
+      setFilterData([...data])
+    }
   };
 
   useEffect(() => {
@@ -46,7 +45,7 @@ function All_products({ filterInfo }) {
   }, [filterInfo]);
 
 
-  function ProductCard({ product, onDelete,increase,decrease }) {
+  function ProductCard({ product, onDelete, increase, decrease }) {
     const [quantityProduct, setQuantityProduct] = useState(product.quantity);
     const handleDelete = () => {
       onDelete(product.id);
@@ -82,11 +81,13 @@ function All_products({ filterInfo }) {
             <i className="bi bi-trash3-fill icons hoverIcon"  ></i>
           </div>
           <div className="actionIcon">
-            <Link to="/update_product" state={product}> <i className="icons bi bi-pencil-fill custom-link hoverIcon"></i></Link>
+            <Link to="/update_product" state={product}>
+              <i className="icons bi bi-pencil-fill custom-link hoverIcon"></i>
+            </Link>
           </div>
         </div>
         <div >
-        <i className={`bi bi-star-fill ${product.rating.rate>4.5?``:`notRating`}`} ></i>
+          <i className={`bi bi-star-fill ${product.rating.rate > 4.5 ? `` : `notRating`}`} ></i>
         </div>
       </div>
     );
@@ -150,7 +151,7 @@ export default All_products
 //             key={product.id}
 //             product={product}
 //             onDelete={handleDeleteProduct}
-//             setFilterData={setFilterData} 
+//             setFilterData={setFilterData}
 //           />
 //         ))}
 //       </div>
@@ -190,7 +191,7 @@ export default All_products
 //           <p className='hoverIcon quty'> { quantityProduct}</p>
 //         </div>
 //         <div className="actionIcon icons quantityIcon" >
-//           <p className='hoverIcon'> -1</p> 
+//           <p className='hoverIcon'> -1</p>
 //         </div>
 //       </div>
 //       <div className="actions">

@@ -5,12 +5,12 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './style/site_header.css'
 const SiteHeader = () => {
 
-    const obg = {
+    const product = {
     }
     return (
         <div id="header">
             <div id="iconsDiv">
-                <Link to="/new_product" state={obg} className="custom-link">
+                <Link to="/new_product" state={product} className="custom-link">
                     <i className="bi bi-plus-circle"></i>
                 </Link>
                 <Link to="/" className="custom-link">
