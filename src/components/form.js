@@ -36,18 +36,18 @@ function ProductForm({ }) {
   };
 
   useEffect(() => {
-    setPhTitle(Object.keys(product).length === 0 ? "Add Title..." : product.title)// titleRef="Add title...";
-    Object.keys(product).length === 0 ? titleRef.current.value = "" : titleRef.current.value = product.title;
-    setPhCategory(Object.keys(product).length === 0 ? "Add Category..." : product.category)// titleRef="Add title...";
-    Object.keys(product).length === 0 ? categoryRef.current.value = "" : categoryRef.current.value = product.category;
-    setPhPrice(Object.keys(product).length === 0 ? "Add Price..." : product.price)// titleRef="Add title...";
-    Object.keys(product).length === 0 ? priceRef.current.value = "" : priceRef.current.value = product.price;
-    setPhImage(Object.keys(product).length === 0 ? "Add Image URL..." : product.image)// titleRef="Add title...";
-    Object.keys(product).length === 0 ? imageRef.current.value = "" : imageRef.current.value = product.image;
-    setPhQuantity(Object.keys(product).length === 0 ? "Add quantity" : product.quantity)// titleRef="Add title...";
-    Object.keys(product).length === 0 ? quantityRef.current.value = "" : quantityRef.current.value = product.quantity;
-    setPhDescription(Object.keys(product).length === 0 ? "Add Description..." : product.description)// titleRef="Add title...";
-    Object.keys(product).length === 0 ? descriptionRef.current.value = "" : descriptionRef.current.value = product.description;
+    setPhTitle(isNewProduct ? "Add Title..." : product.title)
+    isNewProduct ? titleRef.current.value = "" : titleRef.current.value = product.title;
+    setPhCategory(isNewProduct ? "Add Category..." : product.category)
+    isNewProduct ? categoryRef.current.value = "" : categoryRef.current.value = product.category;
+    setPhPrice(isNewProduct ? "Add Price..." : product.price)
+    isNewProduct ? priceRef.current.value = "" : priceRef.current.value = product.price;
+    setPhImage(isNewProduct ? "Add Image URL..." : product.image)
+    isNewProduct ? imageRef.current.value = "" : imageRef.current.value = product.image;
+    setPhQuantity(isNewProduct ? "Add quantity" : product.quantity)
+    isNewProduct ? quantityRef.current.value = "" : quantityRef.current.value = product.quantity;
+    setPhDescription(isNewProduct ? "Add Description..." : product.description)
+    isNewProduct ? descriptionRef.current.value = "" : descriptionRef.current.value = product.description;
 
     console.log('filterData has changed:', product);
   }, [product, title]);
@@ -117,10 +117,10 @@ function ProductForm({ }) {
             required
             ref={categoryRef}
             type="text"
-            defaultValue={isNewProduct ? "" : product.category}
+            defaultValue={dvCategory}
             className={`form-control ${submitted && !categoryRef.current?.value ? 'is-invalid' : ''}`}
             id="category"
-            placeholder={isNewProduct ? "Add Category..." : product.category}
+            placeholder={phCategory}
             name="category"
           />
           <div className="invalid-feedback">Category cannot be empty.</div>
@@ -131,10 +131,10 @@ function ProductForm({ }) {
           <input
             ref={priceRef}
             type="text"
-            defaultValue={isNewProduct ? "" : product.price}
+            defaultValue={dvPrice}
             className={`form-control ${submitted && !priceRef.current?.value ? 'is-invalid' : ''}`}
             id="price"
-            placeholder={isNewProduct ? "Add Price..." : product.price}
+            placeholder={phPrice}
             name="price"
             required
           />
@@ -143,19 +143,41 @@ function ProductForm({ }) {
 
         <div className="mb-3 mt-3">
           <label htmlFor="imgurl">Image URL:</label>
-          <input ref={imageRef} type="url" defaultValue={isNewProduct ? "" : product.image} className="form-control" id="imgurl" placeholder={isNewProduct ? "Add Image URL..." : product.image} name="imgurl">
+          <input 
+          ref={imageRef}
+           type="url"
+            defaultValue={dvImage}
+             className="form-control"
+              id="imgurl"
+               placeholder={phImage}
+                name="imgurl">
           </input>
         </div>
 
         <div className="mb-3 mt-3">
           <label htmlFor="quantity">Quantity:</label>
-          <input ref={quantityRef} type="number" defaultValue={isNewProduct ? "" : product.quantity} className="form-control" id="quantity" placeholder={isNewProduct ? "Add quantity" : product.quantity} name="quantity">
+          <input
+           ref={quantityRef}
+            type="number"
+             defaultValue={dvQuantity}
+              className="form-control"
+               id="quantity"
+                placeholder={phQuantity}
+                 name="quantity">
           </input>
         </div>
 
         <div className="mb-3 mt-3">
           <label htmlFor="description">Description:</label>
-          <textarea ref={descriptionRef} className="form-control" id="description" defaultValue={isNewProduct ? "" : product.description} placeholder={isNewProduct ? "Add Description..." : product.description} name="description"></textarea>
+          <textarea
+           ref={descriptionRef}
+            className="form-control"
+             id="description"
+              defaultValue={dvDescription}
+               placeholder={phDescription}
+                name="description">
+
+                </textarea>
         </div>
 
         <button onClick={saveChanges} type="submit" className="btn btn-primary custom-button">{action}</button>
