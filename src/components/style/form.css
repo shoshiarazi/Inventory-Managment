@@ -1,0 +1,87 @@
+.form-control:focus {
+    border-color: black;
+    box-shadow: 0 0 0 0;
+  }
+  .notDisplay{
+    display: none;
+  }
+
+
+
+  .header2 {
+    position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchIcon {
+  background-color: inherit;
+  margin: inherit;
+  border-bottom-right-radius: inherit;
+  border-top-right-radius: inherit;
+  font-size: inherit;
+  position: inherit;
+  height:inherit;
+  background-color: black;
+  color: white;
+ }
+ .searchIcon:hover{
+  color: black;
+ }
+ .leftIcon:hover{
+  background-color: #f9f5eb;
+  border-radius: 50%;
+  border: 1px solid #e4dccf;
+  cursor: pointer;
+  position: relative;
+ }
+ .leftIcon{
+  padding: 10px;
+  height: 100%;
+ }
+.icon-grid {
+  max-width: 60%;
+  display: flex;
+  align-items: center;
+font-size: 150%;
+  gap: 20%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  flex-wrap: inherit;
+}
+a{
+  color: black;
+}
+.bi-house-door-fill{
+  color: black;
+}
+  .custom-button{
+    background-color: #ffdecb;
+    color: black;
+    border-color: black;
+    box-shadow: 0 0  1rem rgba(46, 46, 46, 0.25);
+    border-radius: 0;
+    font-weight: bold;
+  }
+  .custom-button:hover{
+    background-color:#ffdecb ;
+    color: black;
+    border-color: black;
+  }
+
+  .custom-button:active{
+    color: black;
+    --bs-btn-active-bg: #ffdecb;
+    --bs-btn-border-color: black
+  }
+
+
+
+  @media screen and (max-width:728px) {
+    .icon-grid  {
+       display: grid;
+    grid-template-columns:1fr; 
+    }
+
+}

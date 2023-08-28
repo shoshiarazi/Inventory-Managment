@@ -1,0 +1,74 @@
+#filterLine {
+    background-color: #FFBF9B;
+    padding: 15px 0px;
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#searchBox {
+    border-radius: 25px;
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    margin-right: 50px;
+    margin-bottom: 10px;
+
+}
+
+input {
+    border: none;
+    outline: 0;
+    border-radius: 25px;
+    direction: ltr;
+    font-size: larger;
+    width: 90%;
+}
+
+.bi-search {
+    background-color: #eeeded;
+    margin: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: large;
+    position: absolute;
+    height: 100%;
+}
+
+.bi-search:hover {
+    background-color: #d9d9d9;
+    cursor: pointer;
+}
+
+#fiveButton {
+
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10%;
+}
+
+button {
+    font-size: large;
+    border-radius: 30px;
+    background-color: #FFBF9B;
+    margin: 0px 0px 0px 10px;
+}
+
+.selectedButton {
+    background-color: #ffdecb;
+
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #ffdecb;
+}
+
+.isActive {
+    background-color: #ffdecb;
+}
+
+.isNotActive {
+    background-color: #FFBF9B;
+}

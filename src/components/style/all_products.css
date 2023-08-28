@@ -1,0 +1,133 @@
+#container {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    grid-row-gap:1em;
+    grid-auto-rows: minmax(400px,auto);
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.productCard {
+    background-color: #ffe4ed;
+    width: 100%;
+    max-width: 220px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    /* border: 1px solid black; */
+    border-radius: 25px;
+    background-color: #ffdecb;
+    display: inline-block;
+    height: max-content;
+    /* display: flex; */
+    position: relative;
+    
+}
+
+.image-container {
+    width: 100%;
+    max-width: 220px;
+    height: 100%;
+    max-height: 200px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+
+}
+
+.image-container img {
+    width: 80%;
+}
+
+.data {
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid;
+    border-color: #4d4d4d;
+    margin: 10% 10% 0% 10%;
+}
+
+.quantityIcons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    padding-bottom: 0px;
+  }
+  
+  .quantityIcons p {
+    box-sizing: content-box;
+    margin-left: 10px;
+  }
+  
+  .quantityIcon {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    margin-bottom: 0px;
+  }
+  
+  .actions {
+    padding: 10px;
+  }
+  
+  .actionIcon {
+    display: inline-block;
+    margin-bottom: 4%;
+  }
+  
+  .hoverIcon {
+    padding: 10px;
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+  }
+
+  .hoverIcon:hover {
+    background-color: #f9f5eb;
+    border-radius: 50%;
+    border: 1px solid #e4dccf;
+    cursor: pointer;
+    position: relative;
+  }
+  .quty{
+    border: 1px solid #e4dccf;
+    background-color: #FFBF9B;
+    border-radius: 50%;cursor: auto;
+
+}
+.quty:hover{
+    background-color: #FFBF9B;
+    border-radius: 50%;
+    cursor: auto;
+
+}
+  .hoverIcon:hover p {
+    transform: translate(-50%, -50%);
+    margin:10px;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .custom-link {
+    color: black;
+  }
+  .bi-star-fill{
+    color: #FFBF9B;
+    position: absolute;
+    bottom: 4%;
+    right: 10%;
+  }
+  .notRating{
+    display: none;
+  }
+@media screen and (max-width:728px) {
+    #container {
+       display: grid;
+    grid-template-columns:1fr; 
+    }
+
+}

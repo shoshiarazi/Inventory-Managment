@@ -1,0 +1,10 @@
+.ProductData{
+    background-color: #f5eaed;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+.card{
+    border-radius: 25px;
+    border-color: black;
+    margin-top: 5%;
+}

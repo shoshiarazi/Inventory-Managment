@@ -1,0 +1,14 @@
+.titlePage {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-top: 20px;
+    color: #4d4d4d;
+}
+.pageComponent{
+    background-color: #f5eaed;
+    min-height: calc(100vh - 53px - 71.5px);
+}
+.withFilter{
+    min-height: calc(100vh - 53px - 129.5px);
+}

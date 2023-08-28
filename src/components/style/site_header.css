@@ -1,0 +1,41 @@
+#header {
+    background-color: #ffdecb;
+    display: block;
+    direction: rtl;
+    color: #4d4d4d;
+    display: flex;
+    height: 53px;
+}
+
+#iconsDiv {
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#iconsDiv i {
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.custom-link {
+    color: inherit;
+}
+
+.bi-plus-circle:hover {
+    cursor: pointer;
+    font-size: 3rem;
+}
+
+#titleDiv {
+    flex: 1;
+    direction: ltr;
+    padding-left: 10px;
+    font-style: italic;
+    font-size: 2vw;
+}
