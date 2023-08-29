@@ -65,7 +65,7 @@ function ProductForm({ }) {
         data[index] = { ...data[index], ...newProduct };
       }
       else {
-        data.push({ ...newProduct, ...{ id: data[data.length-1].id+1, rating: { rate: 0, count: 0 } } })
+        data.push({ ...newProduct, ...{ id: data[data.length - 1].id + 1, rating: { rate: 0, count: 0 } } })
       }
       navigate('/')
     }
@@ -103,7 +103,6 @@ function ProductForm({ }) {
             id="title"
             placeholder={phTitle}
             name="title"
-          // value={vTitle}
           />
           <div className="invalid-feedback">Title cannot be empty.</div>
         </div>
@@ -140,41 +139,41 @@ function ProductForm({ }) {
 
         <div className="mb-3 mt-3">
           <label htmlFor="imgurl">Image URL:</label>
-          <input 
-          ref={imageRef}
-           type="url"
+          <input
+            ref={imageRef}
+            type="url"
             defaultValue={dvImage}
-             className="form-control"
-              id="imgurl"
-               placeholder={phImage}
-                name="imgurl">
+            className="form-control"
+            id="imgurl"
+            placeholder={phImage}
+            name="imgurl">
           </input>
         </div>
 
         <div className="mb-3 mt-3">
           <label htmlFor="quantity">Quantity:</label>
           <input
-           ref={quantityRef}
+            ref={quantityRef}
             type="number"
-             defaultValue={dvQuantity}
-              className="form-control"
-               id="quantity"
-                placeholder={phQuantity}
-                 name="quantity">
+            defaultValue={dvQuantity}
+            className="form-control"
+            id="quantity"
+            placeholder={phQuantity}
+            name="quantity">
           </input>
         </div>
 
         <div className="mb-3 mt-3">
           <label htmlFor="description">Description:</label>
           <textarea
-           ref={descriptionRef}
+            ref={descriptionRef}
             className="form-control"
-             id="description"
-              defaultValue={dvDescription}
-               placeholder={phDescription}
-                name="description">
+            id="description"
+            defaultValue={dvDescription}
+            placeholder={phDescription}
+            name="description">
 
-                </textarea>
+          </textarea>
         </div>
 
         <button onClick={saveChanges} type="submit" className="btn btn-primary custom-button">{action}</button>

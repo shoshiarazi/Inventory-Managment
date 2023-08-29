@@ -6,7 +6,7 @@ import "./style/shared_page.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect } from 'react';
 
-function All_products({ filterInfo, setFilterInfo,setSelectedButton }) {
+function All_products({ filterInfo, setFilterInfo, setSelectedButton }) {
   const [filterData, setFilterData] = useState(data);
   const handleDeleteProduct = (productId) => {
     const index = data.findIndex(p => p.id == productId);
@@ -29,8 +29,8 @@ function All_products({ filterInfo, setFilterInfo,setSelectedButton }) {
   };
 
   useEffect(() => {
-    console.log("filterInfo:",filterInfo);
-   }, [filterData]);
+    
+  }, [filterData]);
 
   useEffect(() => {
     const filteredProducts = data.filter(
@@ -42,7 +42,6 @@ function All_products({ filterInfo, setFilterInfo,setSelectedButton }) {
 
     );
     setFilterData([...filteredProducts]);
-console.log("lkjhgfddddddddddd");
   }, [filterInfo]);
 
 

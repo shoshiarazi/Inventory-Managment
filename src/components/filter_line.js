@@ -6,10 +6,9 @@ import './style/filter_line.css'
 import './style/shared_page.css';
 import data from '../dataForProject.js';
 
-const Filter_line = ({ setFilterInfo,selectedButton,setSelectedButton }) => {
+const Filter_line = ({ setFilterInfo, selectedButton, setSelectedButton }) => {
   const [inputSearch, setInputSearch] = useState('');
   const [wordSearch, setWordSearch] = useState('');
-  // const [selectedButton, setSelectedButton] = useState("");
 
   const handleIconClick = () => {
     setWordSearch(inputSearch);
