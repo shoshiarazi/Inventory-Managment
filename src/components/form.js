@@ -48,9 +48,8 @@ function ProductForm({ }) {
     isNewProduct ? quantityRef.current.value = "" : quantityRef.current.value = product.quantity;
     setPhDescription(isNewProduct ? "Add Description..." : product.description)
     isNewProduct ? descriptionRef.current.value = "" : descriptionRef.current.value = product.description;
-
-    console.log('filterData has changed:', product);
   }, [product, title]);
+
   const saveChanges = () => {
     if (titleRef.current.value && categoryRef.current.value && priceRef.current.value) {
       const newProduct = {
@@ -61,18 +60,16 @@ function ProductForm({ }) {
         quantity: quantityRef.current.value,
         description: descriptionRef.current.value,
       };
-      console.log(newProduct);
       const index = data.findIndex(obj => obj.id === product.id);
       if (index !== -1) {
         data[index] = { ...data[index], ...newProduct };
       }
       else {
-        data.push({ ...newProduct, ...{ id: data.length + 1, rating: { rate: 0, count: 0 } } })
+        data.push({ ...newProduct, ...{ id: data.length, rating: { rate: 0, count: 0 } } })
       }
       navigate('/')
     }
     setSubmitted(true);
-    console.log(data);
   }
   return (
 

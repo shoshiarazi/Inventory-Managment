@@ -13,7 +13,6 @@ const Filter_line = ({ setFilterInfo }) => {
 
   const handleIconClick = () => {
     setWordSearch(inputSearch);
-    console.log(wordSearch);
     setFilterInfo(wordSearch);
   };
 

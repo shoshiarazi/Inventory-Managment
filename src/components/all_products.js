@@ -29,8 +29,7 @@ function All_products({ filterInfo }) {
   useEffect(() => {
     filterInfo = "";
 
-    console.log('filterData has changed:', filterData);
-  }, [filterData]);
+   }, [filterData]);
 
   useEffect(() => {
     const filteredProducts = data.filter(

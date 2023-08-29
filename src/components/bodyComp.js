@@ -11,7 +11,6 @@ export default function BodyComp() {
     if (!("quantity" in data[0]))
       data.forEach(item => {
         item.quantity = Math.floor(Math.random() * 20);
-        console.log("data", item.quantity);
       });
   }, []);
   return (
