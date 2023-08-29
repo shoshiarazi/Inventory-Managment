@@ -6,10 +6,10 @@ import './style/filter_line.css'
 import './style/shared_page.css';
 import data from '../dataForProject.js';
 
-const Filter_line = ({ setFilterInfo }) => {
+const Filter_line = ({ setFilterInfo,selectedButton,setSelectedButton }) => {
   const [inputSearch, setInputSearch] = useState('');
   const [wordSearch, setWordSearch] = useState('');
-  const [selectedButton, setSelectedButton] = useState("");
+  // const [selectedButton, setSelectedButton] = useState("");
 
   const handleIconClick = () => {
     setWordSearch(inputSearch);
@@ -22,7 +22,7 @@ const Filter_line = ({ setFilterInfo }) => {
   useEffect(() => {
     setFilterInfo(wordSearch);
 
-  }, [wordSearch, setFilterInfo]);
+  }, [wordSearch]);
   const handleClick = (wordFilter) => {
     setFilterInfo(wordFilter);
     setSelectedButton(wordFilter);

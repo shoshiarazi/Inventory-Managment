@@ -6,6 +6,8 @@ import data from '../dataForProject.js';
 
 export default function BodyComp() {
   const [filterInfo, setFilterInfo] = useState("");
+  const [selectedButton, setSelectedButton] = useState('');
+ 
 
   useEffect(() => {
     if (!("quantity" in data[0]))
@@ -15,9 +17,8 @@ export default function BodyComp() {
   }, []);
   return (
     <div >
-      <Filter_line setFilterInfo={setFilterInfo} />
-      <All_products filterInfo={filterInfo} />
+      <Filter_line setFilterInfo={setFilterInfo} selectedButton= {selectedButton} setSelectedButton={setSelectedButton}/>
+      <All_products filterInfo={filterInfo} setFilterInfo={setFilterInfo} setSelectedButton={setSelectedButton}/>
     </div>
-
   )
 }

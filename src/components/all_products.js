@@ -6,12 +6,14 @@ import "./style/shared_page.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import { useEffect } from 'react';
 
-function All_products({ filterInfo }) {
+function All_products({ filterInfo, setFilterInfo,setSelectedButton }) {
   const [filterData, setFilterData] = useState(data);
   const handleDeleteProduct = (productId) => {
     const index = data.findIndex(p => p.id == productId);
     data.splice(index, 1);
-    setFilterData([...data])
+    setFilterData([...data]);
+    setSelectedButton("");
+    setFilterInfo("");
   };
   const handleIncreaseQuantity = (productId) => {
     const index = data.findIndex(p => p.id == productId);
@@ -27,8 +29,7 @@ function All_products({ filterInfo }) {
   };
 
   useEffect(() => {
-    filterInfo = "";
-
+    console.log("filterInfo:",filterInfo);
    }, [filterData]);
 
   useEffect(() => {
@@ -41,7 +42,7 @@ function All_products({ filterInfo }) {
 
     );
     setFilterData([...filteredProducts]);
-
+console.log("lkjhgfddddddddddd");
   }, [filterInfo]);
 
 

@@ -65,7 +65,7 @@ function ProductForm({ }) {
         data[index] = { ...data[index], ...newProduct };
       }
       else {
-        data.push({ ...newProduct, ...{ id: data.length, rating: { rate: 0, count: 0 } } })
+        data.push({ ...newProduct, ...{ id: data[data.length-1].id+1, rating: { rate: 0, count: 0 } } })
       }
       navigate('/')
     }
